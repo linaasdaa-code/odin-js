@@ -29,3 +29,23 @@ pinkBox.appendChild(boxTitle);
 pinkBox.appendChild(boxText);
 
 container.appendChild(pinkBox);
+
+const btn = document.querySelector('#btn');
+
+btn.addEventListener('click', () => {
+  alert('Hello World');
+});
+
+const colorButtons = document.querySelectorAll('#buttons button');
+
+colorButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (button.id === 'merah') {
+      redText.style.color = 'red';
+    } else if (button.id === 'hijau') {
+      redText.style.color = 'green';
+    } else {
+      redText.style.color = 'purple';
+    }
+  });
+});
